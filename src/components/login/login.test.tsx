@@ -5,7 +5,7 @@ import { store } from "../../store/store";
 import Login from "./login";
 import { MemoryRouter } from "react-router";
 
-describe("Given the Login component", () => {
+describe("Given the Login components", () => {
   beforeEach(async () => {
     render(
       <Provider store={store}>
