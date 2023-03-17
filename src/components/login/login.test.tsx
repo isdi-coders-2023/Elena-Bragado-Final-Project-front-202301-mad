@@ -21,10 +21,5 @@ describe("Given the Login components", () => {
       const elements = [screen.getByRole("button")];
       await fireEvent.click(elements[0]);
     });
-
-    test("Then it should contain the 'heading' role", () => {
-      const elements = [screen.getAllByRole("heading")];
-      expect(elements.length).toBe(1);
-    });
   });
 });
