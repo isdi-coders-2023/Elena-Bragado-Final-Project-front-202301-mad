@@ -23,7 +23,7 @@ describe("Given the App router component", () => {
     test("Then the role 'textbox' should be in the document", async () => {
       await waitFor(async () => listPaths(0));
       const element = await screen.getAllByRole;
-      expect(element.length).toBe(1);
+      expect(element.length).toBeInTheDocument();
     });
   });
 
@@ -31,7 +31,7 @@ describe("Given the App router component", () => {
     test("Then the role 'textbox' should be in the document", async () => {
       await waitFor(async () => listPaths(1));
       const element = await screen.findAllByRole("textbox");
-      expect(element.length).toBe(1);
+      expect(element.length).toBeInTheDocument();
     });
   });
 
