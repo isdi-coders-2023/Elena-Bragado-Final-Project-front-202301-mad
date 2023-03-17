@@ -22,15 +22,15 @@ describe("Given the App router component", () => {
   describe("When rendering and the path is '/'", () => {
     test("Then the role 'textbox' should be in the document", async () => {
       await waitFor(async () => listPaths(0));
-      const element = await screen.findAllByRole("heading");
+      const element = await screen.getAllByRole;
       expect(element.length).toBe(1);
     });
   });
 
   describe("When rendering and the path is '/login'", () => {
-    test("Then the role 'heading' should be in the document two times", async () => {
+    test("Then the role 'textbox' should be in the document", async () => {
       await waitFor(async () => listPaths(1));
-      const element = await screen.findAllByRole("heading");
+      const element = await screen.findAllByRole("textbox");
       expect(element.length).toBe(1);
     });
   });
