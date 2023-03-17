@@ -5,7 +5,7 @@ import { store } from "../../store/store";
 import Register from "./register";
 import { MemoryRouter } from "react-router";
 
-describe("Given the register component", () => {
+describe("Given the register components", () => {
   beforeEach(async () => {
     render(
       <Provider store={store}>
