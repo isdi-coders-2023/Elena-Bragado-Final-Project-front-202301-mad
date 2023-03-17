@@ -3,7 +3,6 @@ import { createRoot } from "react-dom/client";
 import App from "./components/app/app";
 import reportWebVitals from "./reportWebVitals";
 import "./index.css";
-
 import Provider from "react-redux/es/components/Provider";
 import { MemoryRouter as Router } from "react-router-dom";
 import { store } from "./store/store";
