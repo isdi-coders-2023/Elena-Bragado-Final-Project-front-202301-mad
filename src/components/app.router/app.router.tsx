@@ -8,7 +8,7 @@ export function AppRouter() {
   return (
     <Suspense>
       <Routes>
-        {/* <Route path={"/"} element={<Login></Login>}></Route> */}
+        <Route path={"/"} element={<Login></Login>}></Route>
         <Route path={"/login"} element={<Login></Login>}></Route>
         <Route path={"/register"} element={<Register></Register>}></Route>
       </Routes>
