@@ -22,7 +22,7 @@ describe("Given the App router component", () => {
   describe("When rendering and the path is '/'", () => {
     test("Then it should be got to / and render it", async () => {
       await waitFor(async () => paths(0));
-      const element = await screen.findByRole("heading");
+      const element = await screen.findAllByText("/");
       expect(element).toBeInTheDocument();
     });
   });
