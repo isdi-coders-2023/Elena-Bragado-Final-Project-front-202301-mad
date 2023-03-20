@@ -9,29 +9,25 @@ describe("Given the App router component", () => {
   const paths = (number: number) => {
     render(
       <Provider store={store}>
-        <Router
-          initialEntries={["/", "/login", "/register"]}
-          initialIndex={number}
-        >
+        <Router initialEntries={["/login", "/register"]} initialIndex={number}>
           <AppRouter></AppRouter>
         </Router>
       </Provider>
     );
   };
-
-  describe("When rendering and the path is '/'", () => {
-    test("Then it should be got to / and render it", async () => {
+  describe('When it is render and the path is "/register"', () => {
+    test('Then, the "email" input should be in the document', async () => {
       await waitFor(async () => paths(0));
-      const element = await screen.findAllByText("/");
-      expect(element).toBeInTheDocument();
+      const element = await screen.findAllByRole("textbox");
+      expect(element[0]).toBeInTheDocument();
     });
   });
 
-  describe("When rendering and the path is '/login'", () => {
-    test("Then it should be got to /login and render it", async () => {
-      await waitFor(async () => paths(0));
-      const element = await screen.findAllByText("/login");
-      expect(element).toBeInTheDocument();
+  describe('When it is render and the path is "/login"', () => {
+    test('Then, the "name" input should be in the document', async () => {
+      await waitFor(async () => paths(1));
+      const element = await screen.findAllByRole("textbox");
+      expect(element[0]).toBeInTheDocument();
     });
   });
 });
