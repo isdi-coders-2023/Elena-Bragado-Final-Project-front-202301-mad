@@ -5,7 +5,7 @@ import { User } from "../../models/user";
 
 import { Link } from "react-router-dom";
 
-export default function Register() {
+export default function Login() {
   const repo = useMemo(() => new UsersRepo(), []);
   const { userLogin } = useUsers(repo);
 
