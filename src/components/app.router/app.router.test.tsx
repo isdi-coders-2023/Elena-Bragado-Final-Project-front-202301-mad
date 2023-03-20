@@ -26,4 +26,12 @@ describe("Given the App router component", () => {
       expect(element).toBeInTheDocument();
     });
   });
+
+  describe("When rendering and the path is '/login'", () => {
+    test("Then it should be got to /login and render it", async () => {
+      await waitFor(async () => paths(0));
+      const element = await screen.findAllByText("/login");
+      expect(element).toBeInTheDocument();
+    });
+  });
 });
