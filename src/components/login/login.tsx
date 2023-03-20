@@ -25,7 +25,6 @@ export default function Register() {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <h1>Welcome</h1>
         <input
           type="email"
           name="email"

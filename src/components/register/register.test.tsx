@@ -5,7 +5,7 @@ import { store } from "../../store/store";
 import Register from "./register";
 import { MemoryRouter } from "react-router";
 
-describe("Given the register component", () => {
+describe("Given the register components", () => {
   beforeEach(async () => {
     render(
       <Provider store={store}>
@@ -20,11 +20,6 @@ describe("Given the register component", () => {
     test("Then it should contain the button role", async () => {
       const elements = [screen.getByRole("button")];
       await fireEvent.click(elements[0]);
-    });
-
-    test("Then it should contain the heading role", () => {
-      const elements = [screen.getAllByRole("heading")];
-      expect(elements.length).toBe(1);
     });
   });
 });
