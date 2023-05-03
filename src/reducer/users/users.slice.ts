@@ -1,14 +1,16 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { UserStructure } from "../../models/user";
 
-export type State = {
+export type UserStateStructure = {
   userLogged: UserStructure;
   users: UserStructure[];
+  token: string;
 };
 
-const initialState: State = {
+const initialState: UserStateStructure = {
   userLogged: {} as UserStructure,
   users: [],
+  token: "no-token",
 };
 
 export const userSlice = createSlice({
@@ -18,12 +20,16 @@ export const userSlice = createSlice({
     register(state, action: PayloadAction<UserStructure>) {
       state.users = [...state.users, action.payload];
     },
-    login(state, action: PayloadAction<UserStructure>) {
+
+    loginToken(state: UserStateStructure, action: PayloadAction<string>) {
+      state.token = action.payload;
+    },
+    login(state: UserStateStructure, action: PayloadAction<UserStructure>) {
       state.userLogged = action.payload;
     },
   },
 });
 
-export const { register, login } = userSlice.actions;
+export const { loginToken, login } = userSlice.actions;
 
 export const userReducer = userSlice.reducer;

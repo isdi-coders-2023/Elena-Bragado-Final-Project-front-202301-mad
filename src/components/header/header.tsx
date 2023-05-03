@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import { RootState } from "../../store/store";
 import styles from "./header.module.scss";
+import Navbar from "../navbar/navbar";
 
 export function Header() {
   // const lastName = useSelector(
@@ -15,7 +16,7 @@ export function Header() {
           <h1>HomeClick!</h1>
           <p>Facility servicies</p>
         </div>
-        {/* <Navbar /> */}
+        <Navbar />
       </div>
     </header>
   );

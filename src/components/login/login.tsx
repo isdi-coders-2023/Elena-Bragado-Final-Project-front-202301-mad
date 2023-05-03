@@ -3,15 +3,12 @@ import { useUsers } from "../../hooks/useUsers";
 import { UsersRepo } from "../../services/users/users.repo";
 import { UserStructure } from "../../models/user";
 import { Link, useNavigate } from "react-router-dom";
-import { useProfessionals } from "../../hooks/useProfessionals";
-import { ProfessionalsRepo } from "../../services/professionals/professional.repo";
 import "./login.css";
 
 export default function Login() {
   const repoUser = useMemo(() => new UsersRepo(), []);
-  const repoProfessional = useMemo(() => new ProfessionalsRepo(), []);
+
   const { userLogin } = useUsers(repoUser);
-  const { professionals } = useProfessionals(repoProfessional);
 
   const navigate = useNavigate();
 
@@ -26,7 +23,7 @@ export default function Login() {
     };
 
     userLogin(userLogged);
-    // professionals();
+
     formData.reset();
 
     navigate("/professionals/add");

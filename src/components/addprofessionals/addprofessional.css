@@ -5,16 +5,15 @@
   border-radius: 0.9rem;
   padding-left: 0.8rem;
   padding-right: 1.7rem;
-  padding-top: 15rem;
+  padding-top: 13rem;
   padding-bottom: 1rem;
-  gap: 1.8rem;
+  gap: 2rem;
   border-color: #5fa8d3;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   min-height: 78vh;
 }
 .register__forminput {
   border-radius: 0.9rem;
-  font-size: 18px;
   border-radius: 1rem;
   padding-left: 0.5rem;
   padding-right: 0.6rem;

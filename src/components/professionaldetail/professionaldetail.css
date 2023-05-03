@@ -1,0 +1,32 @@
+.homepage__list {
+  display: flex;
+  height: 73vh;
+}
+
+.homepage__home {
+  display: flex;
+  flex-direction: row;
+}
+
+.homepage__image {
+  display: flex;
+  height: 40vh;
+}
+
+.homepage_info {
+  display: flex;
+  min-width: none;
+  font-weight: bold;
+  flex-direction: column;
+  margin-top: 2.5rem;
+  font-size: large;
+  text-align: justify;
+  padding: 2rem;
+  border-color: #1b4965;
+  border: solid;
+  border-width: 0.3px;
+  margin-right: 2.5rem;
+  gap: 1rem;
+  color: #1b4965;
+  background-color: #bee9e8;
+}
