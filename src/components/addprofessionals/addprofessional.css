@@ -41,28 +41,3 @@
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   width: 18rem;
 }
-
-.register__buttonlogin {
-  display: flex;
-  margin-left: -3rem;
-}
-
-a {
-  display: flex;
-  justify-content: center;
-  font-weight: bold;
-  border-radius: 1rem;
-  background-color: #5fa8d3;
-  color: #1b4965;
-  font-size: 16px;
-  text-decoration: none;
-  margin-left: 3rem;
-  width: 50%;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  width: 10rem;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-}

@@ -6,10 +6,12 @@
 }
 
 .navbar {
+  position: relative;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  height: 0.2px;
+  width: -30px;
+  height: 2px;
   color: #1b4965;
 }
 
@@ -28,7 +30,7 @@
 .mobile-menu-icon {
   display: none;
 }
-/*
+
 @media screen and (max-width: 320px) {
   .log {
     display: flex;
@@ -51,4 +53,4 @@
     transition: all 0.5s ease-out;
     width: 100%;
   }
-} */
+}
