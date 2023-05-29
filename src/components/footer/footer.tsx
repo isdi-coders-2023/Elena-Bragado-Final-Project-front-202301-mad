@@ -10,7 +10,7 @@ export function Footer() {
   return (
     <footer className={styles.footer}>
       <address className={styles.address}>
-        Projecto final Isdi Coders Elena Bromeo
+        Projecto final Isdi Coders Elena Bragado
       </address>
       <div className={styles.div}>{email}</div>
     </footer>

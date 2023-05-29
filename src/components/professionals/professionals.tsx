@@ -4,25 +4,24 @@ import { useSelector } from "react-redux";
 // import { Card } from "../../components/card/card";
 
 import { useNavigate } from "react-router-dom";
-import { ProfessionalsRepo } from "../services/professionals/professional.repo";
-import { RootState } from "../store/store";
+import { ProfessionalsRepo } from "../../services/professionals/professional.repo";
+import { RootState } from "../../store/store";
 
-import { ProfessionalStructure } from "../models/professional";
-import { useProfessionals } from "../hooks/useProfessionals";
+import { ProfessionalStructure } from "../../models/professional";
+import { useProfessionals } from "../../hooks/useProfessionals";
 
 export default function ProfessionalsPage() {
   const galleryArray = useSelector(
     (state: RootState) => state.professionalState.filterProfessionals
   );
 
-  // const repoProfessional = useMemo(() => new ProfessionalsRepo(), []);
   const repoProfessional = new ProfessionalsRepo();
   const { professionals, loadDetailProffesional } =
     useProfessionals(repoProfessional);
 
   useEffect(() => {
     professionals();
-  }, []);
+  });
 
   const navigate = useNavigate();
 

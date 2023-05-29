@@ -1,5 +1,5 @@
 import { SyntheticEvent, useMemo } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useUsers } from "../../hooks/useUsers";
 import { ProfessionalStructure } from "../../models/professional";
 import { UsersRepo } from "../../services/users/users.repo";
@@ -12,31 +12,39 @@ export default function AddProfessional() {
   const repoProfessional = useMemo(() => new ProfessionalsRepo(), []);
   const { userLogin } = useUsers(repo);
   const { professionals } = useProfessionals(repoProfessional);
+  const navigator = useNavigate();
 
   const handleSubmit = (event: SyntheticEvent) => {
     event.preventDefault();
     const formData = event.currentTarget as HTMLFormElement;
     const inputs = formData.querySelectorAll("input");
 
-    // const navigate = useNavigate();
+    const newProfessional: Partial<ProfessionalStructure> = {
+      email: inputs[0].value,
+      company: inputs[1].value,
+      assessment: inputs[2].valueAsNumber,
+      telephone: inputs[3].valueAsNumber,
+      description: inputs[4].value,
+      image: inputs[5].value,
+    };
 
-    // const newProfessional: Partial<ProfessionalStructure> = {
-    //   email: inputs[0].value,
-    //   company: inputs[1].value,
-    //   assessment: inputs[2].value,
-    //   telephone: inputs[3].value,
-    //   description: inputs[4].value,
-    //   image: inputs[5].value,
-    // };
-
-    // userLogin(newProfessional);
+    userLogin(newProfessional);
     professionals();
     formData.reset();
-    // navigate("/professionals");
+    navigator("/professionals");
   };
   return (
-    <div>
+    <div className="register__back">
       <form className="register__form" onSubmit={handleSubmit}>
+        <input
+          className="register__forminputfile"
+          type="file"
+          name="image"
+          id="image"
+          required
+          placeholder="Image"
+        />
+
         <input
           className="register__forminput"
           type="email"
@@ -77,9 +85,9 @@ export default function AddProfessional() {
           required
           placeholder="Description"
         />
-        <button className="button__register" type="submit">
-          Add professional
-        </button>
+        <div className="button__register">
+          <Link to="/professionals">Add professional</Link>
+        </div>
       </form>
     </div>
   );

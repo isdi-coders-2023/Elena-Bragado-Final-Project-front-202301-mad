@@ -1,12 +1,15 @@
 import { Suspense, lazy } from "react";
 import { Route, Routes } from "react-router";
-import ProfessionalsPage from "../../pages/professionals";
-import AddProfessional from "../addprofessionals/addprofessional";
-import ProfessionalDetail from "../professionaldetail/professionaldetail";
 
 const Login = lazy(() => import("../login/login"));
 const Register = lazy(() => import("../register/register"));
-
+const AddProfessional = lazy(
+  () => import("../addprofessionals/addprofessional")
+);
+const ProfessionalsPage = lazy(() => import("../professionals/professionals"));
+const ProfessionalDetail = lazy(
+  () => import("../professionaldetail/professionaldetail")
+);
 export function AppRouter() {
   return (
     <Suspense>

@@ -1,3 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.register__back {
+  background-color: #5fa8d3;
+}
 .register__form {
   display: flex;
   align-items: center;
@@ -5,15 +16,24 @@
   border-radius: 0.9rem;
   padding-left: 0.8rem;
   padding-right: 1.7rem;
-  padding-top: 13rem;
+  padding-top: 6rem;
   padding-bottom: 1rem;
-  gap: 2rem;
+  gap: 2.5rem;
   border-color: #5fa8d3;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  min-height: 78vh;
+  min-height: 82vh;
+  text-decoration: none;
+}
+.register__forminputfile {
+  background-color: #1b4965;
+  display: none;
+  display: inline-block;
+  color: #ffff;
+  padding: 1em 1.5em;
+  border-radius: 28px;
+  cursor: pointer;
 }
 .register__forminput {
-  border-radius: 0.9rem;
   font-size: 18px;
   border-radius: 1rem;
   padding-left: 0.5rem;
@@ -30,14 +50,32 @@
   background-color: #ffff;
   border-radius: 2rem;
   font-size: 22px;
-  color: #ffff;
   font-weight: bold;
-  padding-left: 0.6rem;
-  padding-right: 0.6rem;
-  padding-top: 0.6rem;
-  padding-bottom: 0.6rem;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
   background-color: #1b4965;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   width: 18rem;
+}
+
+a {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: 1rem;
+  background-color: #1b4965;
+  color: #ffff;
+  font-size: 19px;
+  text-decoration: none;
+  margin-left: 3.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  width: 10rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }

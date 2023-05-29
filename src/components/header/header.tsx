@@ -1,12 +1,10 @@
 import { useSelector } from "react-redux";
 import { RootState } from "../../store/store";
 import styles from "./header.module.scss";
-import Navbar from "../navbar/navbar";
+import { Navbar } from "../navbar/navbar";
 
 export function Header() {
-  // const lastName = useSelector(
-  //   (state: RootState) => state.users.userLogged.lastName
-  // );
+  const usersState = useSelector((state: RootState) => state.userState);
 
   return (
     <header className={styles.header}>
@@ -15,8 +13,12 @@ export function Header() {
         <div className={styles.title_container}>
           <h1>HomeClick!</h1>
           <p>Facility servicies</p>
+          {usersState.userLogged && (
+            <div className="navbar">
+              <Navbar />
+            </div>
+          )}
         </div>
-        <Navbar />
       </div>
     </header>
   );

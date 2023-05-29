@@ -60,15 +60,20 @@ export default function ProfessionalDetail() {
                 <p>Email: {detailsObject.email}</p>
                 <p>Telephone: {detailsObject.telephone}</p>
                 <p>Description: {detailsObject.description}</p>
+
+                <button className="homepage__edit">Edit</button>
+                <button
+                  className="homepage__delete"
+                  onClick={handlerClickDelete}
+                  aria-label={detailsObject.id}
+                >
+                  Delete
+                </button>
               </div>
             </div>
           </li>
         </ul>
       </article>
-      <button onClick={handlerClickDelete} aria-label={detailsObject.id}>
-        🗑️
-      </button>
-      <button onClick={handlerClickCreateNewProfessional}>✏️</button>
     </>
   );
 }
