@@ -26,7 +26,7 @@ export default function Login() {
 
     formData.reset();
 
-    navigate("/professionals/add");
+    navigate("/professionals");
   };
   return (
     <div>

@@ -46,14 +46,15 @@ export function useProfessionals(repo: ProfessionalsRepo) {
     }
   };
   const createProffesional = async (
-    mockedNewProfessional: Partial<ProfessionalStructure>
+    newProfessional: Partial<ProfessionalStructure>
   ) => {
     try {
       const professionalServerResponse: any = await repo.create(
         userState.token,
-        mockedNewProfessional,
-        "professionals"
+        newProfessional,
+        "professionals/add"
       );
+      console.log(professionalServerResponse);
     } catch (error) {
       console.error((error as Error).message);
     }

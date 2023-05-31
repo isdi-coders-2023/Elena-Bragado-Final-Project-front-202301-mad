@@ -57,7 +57,7 @@ export class ProfessionalsRepo {
 
   async create(
     token: string,
-    mockedNewProfessional: Partial<ProfessionalStructure>,
+    newProfessional: Partial<ProfessionalStructure>,
     urlExtraPath: string
   ): Promise<ServerResponse> {
     const url = this.url + urlExtraPath;
@@ -65,7 +65,7 @@ export class ProfessionalsRepo {
 
     const resp = await fetch(url, {
       method: "POST",
-      body: JSON.stringify(mockedNewProfessional),
+      body: JSON.stringify(newProfessional),
       headers: {
         "Content-type": "application/json",
         Authorization: "Bearer " + token,

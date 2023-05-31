@@ -8,7 +8,7 @@
 
 .homepage__list {
   display: flex;
-  height: 82vh;
+  /* height: 82vh; */
 }
 
 .homepage__home {

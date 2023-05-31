@@ -8,43 +8,39 @@ import { ProfessionalsRepo } from "../../services/professionals/professional.rep
 import { useProfessionals } from "../../hooks/useProfessionals";
 
 export default function AddProfessional() {
-  const repo = useMemo(() => new UsersRepo(), []);
   const repoProfessional = useMemo(() => new ProfessionalsRepo(), []);
-  const { userLogin } = useUsers(repo);
-  const { professionals } = useProfessionals(repoProfessional);
+  const { professionals, createProffesional } =
+    useProfessionals(repoProfessional);
   const navigator = useNavigate();
 
   const handleSubmit = (event: SyntheticEvent) => {
     event.preventDefault();
     const formData = event.currentTarget as HTMLFormElement;
+
     const inputs = formData.querySelectorAll("input");
+    const selectors = formData.querySelectorAll("selector");
 
     const newProfessional: Partial<ProfessionalStructure> = {
-      email: inputs[0].value,
-      company: inputs[1].value,
-      assessment: inputs[2].valueAsNumber,
-      telephone: inputs[3].valueAsNumber,
-      description: inputs[4].value,
-      image: inputs[5].value,
+      email: (formData[0] as HTMLFormElement).value,
+      company: (formData[1] as HTMLFormElement).value,
+      category: (formData[2] as HTMLFormElement).value,
+      assessment: Number((formData[3] as HTMLFormElement).value),
+      telephone: Number((formData[4] as HTMLFormElement).value),
+      description: (formData[5] as HTMLFormElement).value,
+      image:
+        "https://www.freeiconspng.com/thumbs/smile-png/smile-png-photo-19.png",
+      // image: (formData[6] as HTMLFormElement).value,
     };
+    console.log(newProfessional);
 
-    userLogin(newProfessional);
+    createProffesional(newProfessional);
     professionals();
     formData.reset();
     navigator("/professionals");
   };
   return (
-    <div className="register__back">
-      <form className="register__form" onSubmit={handleSubmit}>
-        <input
-          className="register__forminputfile"
-          type="file"
-          name="image"
-          id="image"
-          required
-          placeholder="Image"
-        />
-
+    <div>
+      <form className="register__form1" onSubmit={handleSubmit}>
         <input
           className="register__forminput"
           type="email"
@@ -61,6 +57,20 @@ export default function AddProfessional() {
           required
           placeholder="Company"
         />
+        <select
+          className="register__forminput"
+          name="category"
+          id="category"
+          required
+          placeholder="Category"
+          title="category"
+        >
+          <option>Carpenter</option>
+          <option selected={true}>Category</option>
+          <option>Electrician</option>
+
+          <option>Plumber</option>
+        </select>
         <input
           className="register__forminput"
           type="assessment"
@@ -84,10 +94,19 @@ export default function AddProfessional() {
           id="description"
           required
           placeholder="Description"
+        />{" "}
+        <input
+          className="register__forminputfile"
+          type="file"
+          name="image"
+          id="image"
+          required
+          placeholder="Image"
         />
-        <div className="button__register">
-          <Link to="/professionals">Add professional</Link>
-        </div>
+        <button className="button__registerProfessional">
+          {/* <Link to="/professionals">Add professional</Link> */}
+          Add professional
+        </button>
       </form>
     </div>
   );

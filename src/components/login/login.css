@@ -17,7 +17,7 @@
   gap: 2.5rem;
   border-color: #5fa8d3;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  min-height: 82vh;
+  min-height: 80vh;
 }
 
 .login__forminput {
@@ -35,10 +35,10 @@
 
 .button__login {
   width: 100%;
-  background-color: #ffff;
   border-radius: 2rem;
   font-size: 22px;
-  color: #ffff;
+  text-decoration: none;
+  color: #bee9e8;
   font-weight: bold;
   padding-left: 0.6rem;
   padding-right: 0.6rem;
@@ -52,7 +52,8 @@
 
 .register__buttonregister {
   width: 100%;
-  background-color: #ffff;
+  color: white;
+  text-decoration: none;
   border-radius: 2rem;
   font-size: 22px;
   font-weight: bold;

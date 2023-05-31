@@ -1,5 +1,5 @@
 import "./professionals.css";
-import { SyntheticEvent, useEffect } from "react";
+import { SyntheticEvent, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 // import { Card } from "../../components/card/card";
 
@@ -11,6 +11,8 @@ import { ProfessionalStructure } from "../../models/professional";
 import { useProfessionals } from "../../hooks/useProfessionals";
 
 export default function ProfessionalsPage() {
+  const [renderNumber, setRenderNumber] = useState(1);
+  console.log(renderNumber);
   const galleryArray = useSelector(
     (state: RootState) => state.professionalState.filterProfessionals
   );
@@ -20,8 +22,10 @@ export default function ProfessionalsPage() {
     useProfessionals(repoProfessional);
 
   useEffect(() => {
-    professionals();
-  });
+    if (renderNumber === 1) professionals();
+    setRenderNumber(renderNumber + 1);
+    console.log(renderNumber);
+  }, []);
 
   const navigate = useNavigate();
 
@@ -38,6 +42,14 @@ export default function ProfessionalsPage() {
   return (
     <>
       <div className="professionalsPage__container">
+        <label>
+          {"Category"}
+          <select title="selectCategory">
+            <option>Carpenter</option>
+            <option>Electrician</option>
+            <option>Plumber</option>
+          </select>
+        </label>
         <ul className="professionalsPage__list">
           {galleryArray.map((item: Partial<ProfessionalStructure>) => (
             <li className="professionalsPageCard" key={item.id}>

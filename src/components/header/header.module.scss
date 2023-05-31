@@ -8,7 +8,6 @@
 
 header {
   height: 12vh;
-  width: auto;
   background-color: white;
   padding-left: 3rem;
   padding-right: 3rem;
@@ -18,22 +17,24 @@ header {
 
   h1 {
     display: flex;
-    justify-content: space-around;
-    margin-top: 10px;
+    justify-content: flex-start;
     color: #1b4965;
+    padding-left: 11.9rem;
+    margin-top: -5rem;
   }
   p {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     color: #1b4965;
-    margin-top: -5px;
+    padding-left: 12rem;
+    margin-top: -0.5rem;
     font-size: 125%;
     font-weight: bold;
   }
 
   img {
-    position: absolute;
-    height: 4.2rem;
+    position: relative;
+    height: 5rem;
   }
 
   @media (min-width: 320px) {
