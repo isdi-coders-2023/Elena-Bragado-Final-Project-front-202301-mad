@@ -4,7 +4,7 @@ import { SyntheticEvent } from "react";
 import { RootState } from "../../store/store";
 import { ProfessionalsRepo } from "../../services/professionals/professional.repo";
 import { useProfessionals } from "../../hooks/useProfessionals";
-import "./professionaldetail.css";
+import "./professionaledit.css";
 
 export default function ProfessionaEdit() {
   const detailsObject = useSelector(

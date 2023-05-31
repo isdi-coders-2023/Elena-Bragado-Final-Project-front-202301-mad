@@ -94,13 +94,10 @@ export default function AddProfessional() {
           id="description"
           required
           placeholder="Description"
-        />{" "}
+        />
         <input
           className="register__forminputfile"
           type="file"
-          name="image"
-          id="image"
-          required
           placeholder="Image"
         />
         <button className="button__registerProfessional">

@@ -8,6 +8,7 @@
 
 .homepage__list {
   display: flex;
+  background-color: #bee9e8;
   /* height: 82vh; */
 }
 
@@ -17,22 +18,28 @@
 }
 
 .homepage__image {
-  display: flex;
-  height: 40vh;
+  /* display: flex; */
+  height: 35vh;
+  margin-top: 8rem;
+  position: relative;
+  right: -40px;
+  border-color: #1b4965;
+  border-style: solid;
+  border-radius: 2rem;
 }
 
 .homepage_info {
   display: flex;
   font-weight: bold;
   flex-direction: column;
-  margin-top: 4.5rem;
+  margin-top: 2.5rem;
   font-size: large;
   text-align: justify;
-  padding: 8rem;
-
-  gap: 1.5rem;
+  padding: 7rem;
+  gap: 1.9rem;
   color: #1b4965;
-  background-color: #bee9e8;
+  min-height: 70vh;
+  /* background-color: #bee9e8; */
 }
 .homepage__edit {
   outline: none;

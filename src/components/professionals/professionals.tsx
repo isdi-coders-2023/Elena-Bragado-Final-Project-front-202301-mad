@@ -42,12 +42,22 @@ export default function ProfessionalsPage() {
   return (
     <>
       <div className="professionalsPage__container">
-        <label>
-          {"Category"}
+        <label className="professionalsPage__category">
+          {"Category:"}
           <select title="selectCategory">
             <option>Carpenter</option>
             <option>Electrician</option>
             <option>Plumber</option>
+          </select>
+        </label>
+        <label>
+          {"Assessment:"}
+          <select title="selectCategory">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
           </select>
         </label>
         <ul className="professionalsPage__list">

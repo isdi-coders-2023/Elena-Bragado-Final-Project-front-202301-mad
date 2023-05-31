@@ -13,6 +13,17 @@
   min-width: 80vh;
   min-height: 80vh;
 }
+.professionalsPage__category {
+  /* display: flex;
+  justify-content: center;
+  color: #1b4965; */
+
+  display: flex;
+
+  align-items: center;
+  gap: 14px;
+  padding: 1px 1px 1px 1px;
+}
 
 .professionalsPage__list {
   border-color: #1b4965;
@@ -27,7 +38,7 @@
 .professionalsPageCard {
   width: calc(20% - 0vh);
   border-style: solid;
-  border-color: lightgrey;
+  border-color: #1b4965;
   width: 245px;
   height: 355px;
   /* max-width: 20%;  Ancho máximo de cada tarjeta */
@@ -45,6 +56,8 @@
 }
 .professionalsPageCard__image {
   height: 20vh;
+  margin-top: 0.2rem;
+  border-radius: 1rem;
   margin-bottom: 1.5rem;
 }
 
