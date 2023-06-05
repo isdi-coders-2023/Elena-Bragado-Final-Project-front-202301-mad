@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.homepage__list {
+  display: flex;
+  background-color: #bee9e8;
+  /* height: 82vh; */
+}
+
+.homepage__home {
+  display: flex;
+  flex-direction: row;
+}
+
+.homepage__image {
+  /* display: flex; */
+  height: 35vh;
+  margin-top: 8rem;
+  position: relative;
+  right: -40px;
+  border-color: #1b4965;
+  border-style: solid;
+  border-radius: 2rem;
+}
+
+.homepage_info {
+  display: flex;
+  font-weight: bold;
+  flex-direction: column;
+  margin-top: 2.5rem;
+  font-size: large;
+  text-align: justify;
+  padding: 7rem;
+  gap: 1.9rem;
+  color: #1b4965;
+  min-height: 70vh;
+  /* background-color: #bee9e8; */
+}
+.homepage__edit {
+  outline: none;
+  display: inline-block;
+  border: 1px solid #1b4965;
+  padding: 0.8rem 2rem;
+  border-radius: 5px;
+  background: transparent;
+  color: #1b4965;
+  font-size: 1.2rem;
+  transition: 0.3s;
+  cursor: pointer;
+  position: relative;
+}
+
+.homepage__edit::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  border-top: 2px solid #1b4965;
+  border-left: 2px solid #1b4965;
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.homepage__edit::after {
+  content: "";
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.homepage__edit:hover {
+  box-shadow: #1b4965;
+  transform: translateY(-5px);
+}
+
+.homepage__edit:hover::after,
+.btn:hover::before {
+  height: 30px;
+  width: 30px;
+  opacity: 1;
+}
+
+.homepage__delete {
+  outline: none;
+  display: inline-block;
+  border: 1px solid #1b4965;
+  padding: 0.8rem 2rem;
+  border-radius: 5px;
+  background: transparent;
+  color: #1b4965;
+  font-size: 1.2rem;
+  transition: 0.3s;
+  cursor: pointer;
+  position: relative;
+}
+
+.homepage__delete::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  border-top: 2px solid #1b4965;
+  border-left: 2px solid #1b4965;
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.homepage__delete::after {
+  content: "";
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.homepage__delete:hover {
+  box-shadow: #1b4965;
+  transform: translateY(-5px);
+}
+
+.homepage__delete:hover::after,
+.btn:hover::before {
+  height: 30px;
+  width: 30px;
+  opacity: 1;
+}

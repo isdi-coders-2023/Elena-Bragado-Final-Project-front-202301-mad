@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
+import { professionalReducer } from "../reducer/professionals/professionals.slice";
 import { userReducer } from "../reducer/users/users.slice";
 
 export const store = configureStore({
   reducer: {
-    users: userReducer,
+    userState: userReducer,
+    professionalState: professionalReducer,
   },
 });
 

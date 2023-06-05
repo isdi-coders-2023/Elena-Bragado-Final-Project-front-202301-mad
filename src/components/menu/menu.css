@@ -1,0 +1,30 @@
+.menu__container {
+  display: flex;
+  width: 98%;
+  margin-top: -3rem;
+  justify-content: flex-end;
+}
+
+.menu__list {
+  display: flex;
+  justify-content: space-around;
+}
+.menu__option {
+  list-style: none;
+  color: #bee9e8;
+}
+
+.menu__link {
+  text-decoration: none;
+  color: white;
+  font-style: oblique;
+  font-weight: bold;
+  font-size: 1.1rem;
+  background-color: #1b4965;
+  border-radius: 1.5rem;
+  padding: 0.5rem;
+}
+.menu__link:hover {
+  color: #bee9e8;
+  text-decoration: none;
+}
