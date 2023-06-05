@@ -43,14 +43,15 @@ export default function ProfessionalsPage() {
     <>
       <div className="professionalsPage__container">
         <label className="professionalsPage__category">
-          {"Category:"}
+          {/* {"Category:"} */}
           <select title="selectCategory">
+            <option>All category</option>
             <option>Carpenter</option>
             <option>Electrician</option>
             <option>Plumber</option>
           </select>
         </label>
-        <label>
+        {/* <label className="professionalsPage__assessment">
           {"Assessment:"}
           <select title="selectCategory">
             <option>1</option>
@@ -59,7 +60,8 @@ export default function ProfessionalsPage() {
             <option>4</option>
             <option>5</option>
           </select>
-        </label>
+        </label> */}
+        <div className="professionalPage__space"></div>
         <ul className="professionalsPage__list">
           {galleryArray.map((item: Partial<ProfessionalStructure>) => (
             <li className="professionalsPageCard" key={item.id}>

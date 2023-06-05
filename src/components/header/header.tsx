@@ -9,7 +9,7 @@ export function Header() {
         <img src="../../../logo.png" alt="logo" />
         <div className={styles.title_container}>
           <h1>HomeClick!</h1>
-          <p>Facility servicies</p>
+          <p>Facility services</p>
 
           <div className="navbar">
             <nav className="header__menu">

@@ -14,7 +14,7 @@ export function Footer() {
         Proyecto final Isdi Coders Elena Bragado
       </address>
       <div className={styles.div}>{email}</div>
-      <div>{"Server: " + url_def}</div>
+      {/* <div>{"Server: " + url_def}</div> */}
     </footer>
   );
 }
